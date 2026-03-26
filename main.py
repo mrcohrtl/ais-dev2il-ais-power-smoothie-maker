@@ -10,8 +10,7 @@ def get_ingredients(recipe_file: Path) -> list[str]:
     with open(recipe_file, "r") as f:
         return [line.strip() for line in f.readlines() if line.strip()]
 
-def make_smoothie(recipe_file: Path) -> list[str]:
-    console = Console()
+def make_smoothie(recipe_file: Path, console: Console) -> list[str]:
 
     ingredients = get_ingredients(recipe_file)
     if not ingredients:
